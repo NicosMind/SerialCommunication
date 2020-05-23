@@ -10,12 +10,15 @@
 
 
 
-// the setup function runs once when you press reset or power the board
+//receive sketch
 void setup() {
-
+    Serial2.begin(9600);
 }
 
-// the loop function runs over and over again until power down or reset
 void loop() {
-  
+    String received = "";
+    while (Serial2.available())
+    {
+        Serial2.println(Serial2.read());
+    }
 }
