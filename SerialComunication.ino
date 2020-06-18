@@ -19,6 +19,7 @@ void loop() {
     String received = "";
     while (Serial2.available())
     {
-        Serial2.println(Serial2.read());
+        char received = Serial2.read();
+        Serial2.println(received);
     }
 }
